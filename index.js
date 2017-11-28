@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
 
-const port = 5000;
+
+var port = 5000;
 
 app.use(express.static('public'));
 app.set('views', './src/views');
@@ -14,6 +13,12 @@ app.get('/', function(req, res){
     res.render('index');
     // res.sendFile('./public/views/index.html');
 });
+
+var server = app.listen(port, err => {
+    console.log(`running server on port ${port}`)
+})
+var io = require('socket.io').listen(server);
+
 
 io.on('connection', function(socket){
     console.log('a user connected');
@@ -27,10 +32,8 @@ io.on('connection', function(socket){
     });
 });
 
-// app.listen(port, err => {
-//     console.log(`running server on port ${port}`);
-// });
 
-http.listen(3000, function(){
-    console.log('listening on *:3000');
-});
+
+// http.listen(5000, function(){
+//     console.log('listening on *:5000');
+// });
