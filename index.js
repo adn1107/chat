@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 
-var port = 5000;
+var port = process.env.PORT || 5000;
 
 app.use(express.static('public'));
 app.set('views', './src/views');
@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 });
 
 var server = app.listen(port, err => {
-    console.log(`running server on port ${port}`)
+    console.log(`running server on port ${port}`);
 })
 var io = require('socket.io').listen(server);
 
