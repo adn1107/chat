@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
     <!-- font awesome library -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <ul id="messages"></ul>
     <form action="">
-        <input id="m" autocomplete="off" /><button type="submit" class="btn btn-primary">Send</button>
+        <!-- <input id="m" autocomplete="off" /><button type="submit" class="btn btn-primary">Send</button> -->
+        <input id="m" autocomplete="off" /><button>Send</button>
     </form>
 
 
 
 
     <script src="/socket.io/socket.io.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-1.11.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
     <script>
         $(function () {
             var socket = io();
